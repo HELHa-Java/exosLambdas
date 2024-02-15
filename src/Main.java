@@ -3,7 +3,7 @@ import java.util.List;
 
 // 1. chaque utilisation de lambda, déterminer le type du paramètre qui accueille la lambda et le type de retour de la lambda
 // 2. pour chaque affichage, définissez le contenu de la collection affichée ("c'est une collection qui contient des étudiants qui... ordonnées par ..." par exemple)
-
+// 3. renommez les variables pour qu'elles soient plus explicites quant à leur contenu
 
 public class Main {
 
