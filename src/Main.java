@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,9 +18,9 @@ public class Main {
                 new Student("Eva", 21, 78.3)
         );
 
-        List<Student> studentsList1 = students.stream()
+        List<Student> studentsList1 = new ArrayList<>(students.stream()
                 .filter(student -> student.getNote() > 70)
-                .toList();
+                .toList());
 
         studentsList1.sort((s1, s2) -> Integer.compare(s2.getAge(), s1.getAge()));
 
@@ -38,7 +39,7 @@ public class Main {
                 .map(string -> string.toUpperCase())
                 .toList();
 
-        Student topStudent = students.stream()
+        Student theStudent = students.stream()
                 .max((s1, s2) -> 0 - Double.compare(s1.getNote(), s2.getNote()))
                 .orElse(null);
 
@@ -50,7 +51,7 @@ public class Main {
 
         stringsList2.forEach(System.out::println);
 
-        System.out.println(topStudent);
+        System.out.println(theStudent);
     }
 }
 
